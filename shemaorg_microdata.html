@@ -1,0 +1,120 @@
+<!--Поиск Гугл-->
+<div itemscope itemtype="https://schema.org/WebSite">
+	<meta itemprop="url" content="https://www.example.com/"/>
+	<form itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
+		<meta itemprop="target" content="https://query.example.com/search?q={search_term_string}">
+		<input itemprop="query-input" type="text" name="search_term_string" required> <input type="submit">
+	</form>
+</div>
+<!--Хлебные крошки-->
+<nav>
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="url_ссылки" title="Основной раздел" itemprop="item"> <span itemprop="name">Основной раздел</span>
+				<meta itemprop="position" content="0">
+			</a>
+		</li>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="url_ссылки" title="Подраздел уровня 1" itemprop="item"><span itemprop="name">Подраздел уровня 1</span>
+				<meta itemprop="position" content="1">
+			</a>
+		</li>
+		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a href="№" title="Подраздел уровня 2" itemprop="item"><span itemprop="name">Подраздел уровня 2</span>
+				<meta itemprop="position" content="2">
+			</a>
+		</li>
+	</ul>
+</nav>
+<div itemscope itemtype="http://schema.org/Blog">
+	<h1 itemprop="description">{Название документа/раздела}</h1>
+	<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+		<h2 itemprop="headline">{название_статьи_N}</h2>
+		<meta itemprop="datePublished" content="{Дата публикации. Пример: 2020-01-14T07:20:10+03:00}"/>
+		<img itemprop="articleSection" content="{название раздела}"> <img itemprop="image" src="{ссылка_на_фото_материала}">
+		<meta itemprop="description" content="{краткое_описание_статьи N}"/>
+		<meta itemprop="author" content="{Автор статьи}"/>
+		<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" class=”DisplaNone”>
+			<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+				<img itemprop="url image" src="ссылка_на_логотип"/>
+			</div>
+			<meta itemprop="name" content="Название домена или Компании">
+		</div>
+		<meta itemprop="dateModified" content="{Дата изменения. Пример: 2020-01-14T07:20:10+03:00}">
+		<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{ссылка_на_статью}"/>
+	</article>
+</div>
+<!-- Список статей блога -->
+<div itemscope itemtype="http://schema.org/Blog">
+	<h1 itemprop="description">{Название документа/раздела}</h1>
+	<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+		<h2 itemprop="headline">{название_статьи_N}</h2>
+		<meta itemprop="datePublished" content="{Дата публикации. Пример: 2020-01-14T07:20:10+03:00}"/>
+		<img itemprop="articleSection" content="{название раздела}"> <img itemprop="image" src="{ссылка_на_фото_материала}">
+		<meta itemprop="description" content="{краткое_описание_статьи N}"/>
+		<meta itemprop="author" content="{Автор статьи}"/>
+		<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" class=”DisplaNone”>
+			<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+				<img itemprop="url image" src="ссылка_на_логотип"/>
+			</div>
+			<meta itemprop="name" content="Название домена или Компании">
+		</div>
+		<meta itemprop="dateModified" content="{Дата изменения. Пример: 2020-01-14T07:20:10+03:00}">
+		<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{ссылка_на_статью}"/>
+	</article>
+</div>
+<!-- рецензия материала -->
+<div itemscope="" itemtype="http://schema.org/Organization">
+	<meta itemprop="name" content="Название_страницы">
+	<meta itemprop="description" content="description">
+	<link itemprop="url" href="url_страницы">
+	<div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+		<meta itemprop="worstRating" content="1"> <!-- Мин. значение -->
+		<meta itemprop="bestRating" content="5"> <!-- Макс. Значение -->
+		<meta itemprop="ratingValue" content="4.6"> <!-- средняя оценка. если пусто выводим 5 -->
+		<meta itemprop="ratingCount" content="8864">  <!-- общее количество голосов  -->
+	</div>
+	<div itemprop="review" itemtype="http://schema.org/Review" itemscope="">
+		<div itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+			<meta itemprop="name" content="Название домена или Компании">
+			<link itemprop="url" href="https://site.ru/">
+		</div>
+	</div>
+</div>
+<!--Разметка статьи -->
+<article itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="headline" content="title"/>
+	<h1 itemprop="name">{Заголовок документа}</h1>
+	<!-- Ссылка на статью -->
+	<meta itemprop="url" content="{Ссылка на статью}"/>
+	<meta itemprop="description" content="{description}"/>
+	<img itemprop="articleSection" content="{название раздела}">
+	<!-- Каноническая ссылка статьи -->
+	<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{Каноническая ссылка}" content="{Заголовок статьи}"/>
+	<!-- Ссылка на превью статьи -->
+	<div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+		<img itemprop="url contentUrl" src="{Ссылка на превью}" alt="{Заголовок статьи}"/>
+	</div>
+	<!-- Дата публикации и дата последнего изменения -->
+	<meta itemprop="datePublished" content="{Дата публикации. Пример: 2020-01-14T07:20:10+03:00}"/>
+	<meta itemprop="dateModified" content="{Дата изменения. Пример: 2020-01-14T07:20:10+03:00}"/>
+	<meta itemprop="inLanguage" content="ru-RU"/> <!-- язык текста на сайте -->
+	<!-- основной текст статьи -->
+	<div itemprop="articleBody">
+		{текст_материала в html}
+	</div>
+	<!-- Автор статьи -->
+	<div itemprop="author" itemscope itemtype="http://schema.org/Person">
+		<meta itemprop="name" content=”{Автор статьи}”>
+	</div>
+	<!-- Контактная информация о сайте/организации -->
+	<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+		<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+			<img itemprop="url" src="{Ссылка на логотип}" alt="Название домена или Компании"/>
+			<meta itemprop="width" content="200"/>
+			<meta itemprop="height" content="200"/>
+		</div>
+		<meta itemprop="name" content="Название домена или Компании"/>
+		<meta itemprop="url" content="https://site.ru/"/>
+	</div>
+</article>
